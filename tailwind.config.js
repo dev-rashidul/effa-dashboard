@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export const darkMode = ["class"];
 export const content = [
-  './pages/**/*.{js,jsx}',
-  './components/**/*.{js,jsx}',
-  './app/**/*.{js,jsx}',
-  './src/**/*.{js,jsx}',
+  "./pages/**/*.{js,jsx}",
+  "./components/**/*.{js,jsx}",
+  "./app/**/*.{js,jsx}",
+  "./src/**/*.{js,jsx}",
 ];
 export const prefix = "";
 export const theme = {
@@ -16,7 +16,13 @@ export const theme = {
     },
   },
   extend: {
+    fontFamily: {
+      archivo: ["Archivo", "sans-serif"],
+    },
     colors: {
+      blackNormal: "#4C525B",
+      LightBlack: "#83888F",
+      darkOrange: "#BF7E24",
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",
       ring: "hsl(var(--ring))",

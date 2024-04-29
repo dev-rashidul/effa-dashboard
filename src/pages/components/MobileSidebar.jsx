@@ -1,107 +1,171 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 import {
-    Home,
-    LineChart,
-    Menu,
-    Package,
-    Package2,
-    ShoppingCart,
-    Users
+  BadgeHelp,
+  BriefcaseBusiness,
+  Building2,
+  GraduationCap,
+  LayoutDashboard,
+  Menu,
+  NotebookText,
+  Receipt,
+  Route,
+  Settings,
+  UserCog,
+  Wallet,
 } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card";
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@radix-ui/react-accordion";
+import { NavLink } from "react-router-dom";
 
 const MobileSidebar = () => {
-    return (
-        <>
-                  <Sheet>
-          <SheetTrigger asChild>
-            <Button
-              variant="outline"
-              size="icon"
-              className="shrink-0 md:hidden"
-            >
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle navigation menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="left" className="flex flex-col">
-            <nav className="grid gap-2 text-lg font-medium">
-              <a
-                href="#"
-                className="flex items-center gap-2 text-lg font-semibold"
-              >
-                <Package2 className="h-6 w-6" />
-                <span className="sr-only">Acme Inc</span>
-              </a>
-              <a
-                href="#"
-                className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <Home className="h-5 w-5" />
-                Dashboard
-              </a>
-              <a
-                href="#"
-                className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
-              >
-                <ShoppingCart className="h-5 w-5" />
-                Orders
-                <Badge className="ml-auto flex h-6 w-6 shrink-0 items-center justify-center rounded-full">
-                  6
-                </Badge>
-              </a>
-              <a
-                href="#"
-                className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <Package className="h-5 w-5" />
-                Products
-              </a>
-              <a
-                href="#"
-                className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <Users className="h-5 w-5" />
-                Customers
-              </a>
-              <a
-                href="#"
-                className="mx-[-0.65rem] flex items-center gap-4 rounded-xl px-3 py-2 text-muted-foreground hover:text-foreground"
-              >
-                <LineChart className="h-5 w-5" />
-                Analytics
-              </a>
-            </nav>
-            <div className="mt-auto">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Upgrade to Pro</CardTitle>
-                  <CardDescription>
-                    Unlock all features and get unlimited access to our support
-                    team.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button size="sm" className="w-full">
-                    Upgrade
-                  </Button>
-                </CardContent>
-              </Card>
+  return (
+    <>
+      <Sheet>
+        <SheetTrigger asChild>
+          <Button variant="outline" size="icon" className="shrink-0 md:hidden">
+            <Menu className="h-5 w-5" />
+            <span className="sr-only">Toggle navigation menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="left" className="flex flex-col">
+          <nav className="grid gap-2 text-lg font-medium">
+            <div className="relative flex h-full max-h-screen flex-col">
+              <div className="flex-1 pt-6">
+                <nav className="grid items-start text-sm font-medium">
+                  <NavLink
+                    to="/dashboard"
+                    className="flex items-center text-sm text-LightBlack gap-3 rounded-lg px-3 py-3 mb-2"
+                  >
+                    <LayoutDashboard className="h-6 w-6" />
+                    Dashboard
+                  </NavLink>
+                  <NavLink
+                    to="/company-profile"
+                    className="flex items-center text-sm text-LightBlack bg-[#FEF6EC] gap-3 rounded-lg px-3 py-3 mb-2"
+                  >
+                    Company Profile
+                  </NavLink>
+                  <NavLink
+                    to="/"
+                    className="flex items-center text-sm text-LightBlack gap-3 rounded-lg px-3 py-3 mb-2"
+                  >
+                    <GraduationCap className="h-6 w-6" />
+                    Scholarships
+                  </NavLink>
+                  <Accordion type="single" collapsible>
+                    <AccordionItem value="item-1" className="px-3 border-b-0">
+                      <AccordionTrigger className="p-0 py-3 mb-2">
+                        <NavLink
+                          className="flex items-center text-sm text-LightBlack gap-3 rounded-lg hover:no-underline"
+                          to="/applicants"
+                        >
+                          <Building2 className="w-6 h-6" />
+                          Applicants
+                        </NavLink>
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        <div className="flex flex-col">
+                          <Button
+                            asChild
+                            variant="ghost"
+                            className="text-LightBlack hover:bg-transparent text-start block pt-2"
+                          >
+                            <a href="#">Dropdown 1</a>
+                          </Button>
+                          <Button
+                            asChild
+                            variant="ghost"
+                            className="text-LightBlack hover:bg-transparent text-start block pt-2"
+                          >
+                            <a href="#">Dropdown 2</a>
+                          </Button>
+                          <Button
+                            asChild
+                            variant="ghost"
+                            className="text-LightBlack hover:bg-transparent text-start block pt-2"
+                          >
+                            <a href="#">Dropdown 3</a>
+                          </Button>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                  <NavLink
+                    to="/job-descriptions"
+                    className="flex items-center text-sm text-LightBlack gap-3 rounded-lg px-3 py-3 mb-2"
+                  >
+                    <BriefcaseBusiness className="h-6 w-6" />
+                    Job Descriptions
+                  </NavLink>
+                  <NavLink
+                    to="/financials"
+                    className="flex items-center text-sm text-LightBlack gap-3 rounded-lg px-3 py-3 mb-2"
+                  >
+                    <Wallet className="h-6 w-6" />
+                    Financials
+                  </NavLink>
+                  <NavLink
+                    to="/reports"
+                    className="flex items-center text-sm text-LightBlack gap-3 rounded-lg px-3 py-3 mb-2"
+                  >
+                    <NotebookText className="h-6 w-6" />
+                    Reports
+                  </NavLink>
+                  <NavLink
+                    to="/company-assets"
+                    className="flex items-center text-sm text-LightBlack gap-3 rounded-lg px-3 py-3 mb-2"
+                  >
+                    <Receipt className="h-6 w-6" />
+                    Company Assets
+                  </NavLink>
+                  <NavLink
+                    to="/pathway"
+                    className="flex items-center text-sm text-LightBlack gap-3 rounded-lg px-3 py-3 mb-2"
+                  >
+                    <Route className="h-6 w-6" />
+                    Pathway
+                  </NavLink>
+                  <NavLink
+                    to="/roles"
+                    className="flex items-center text-sm text-LightBlack gap-3 rounded-lg px-3 py-3 mb-2"
+                  >
+                    <UserCog className="h-6 w-6" />
+                    Roles
+                  </NavLink>
+                </nav>
+              </div>
+              <div className="mt-auto p-4 fixed bottom-[20px]"></div>
             </div>
-          </SheetContent>
-        </Sheet>  
-        </>
-    );
+          </nav>
+          <div className="fixed bottom-5">
+            <nav className="grid items-start text-sm font-medium">
+              <NavLink
+                to="/help"
+                className="flex items-center text-sm text-LightBlack gap-3 rounded-lg px-3 py-3"
+              >
+                <BadgeHelp className="h-6 w-6" />
+                Help & Support
+              </NavLink>
+              <NavLink
+                to="/settings"
+                className="flex items-center text-sm text-LightBlack gap-3 rounded-lg px-3 py-3"
+              >
+                <Settings className="h-6 w-6" />
+                Setting
+              </NavLink>
+            </nav>
+          </div>
+        </SheetContent>
+      </Sheet>
+    </>
+  );
 };
 
 export default MobileSidebar;
