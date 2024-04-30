@@ -19,7 +19,7 @@ const Header = () => {
 
         <MobileSidebar />
 
-        <div className="w-full flex-1 ps-2 ps-md-0">
+        <div className="w-full flex-1 ps-2 md:ps-0">
           <div className="site-title">
             <h4 className="text-lg md:text-2xl text-blackNormal font-medium">
               Scholarship

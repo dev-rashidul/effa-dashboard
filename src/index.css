@@ -80,6 +80,16 @@ nav a {
 }
 
 nav a.active {
+  font-weight: 600 !important;
   color: #bf7e24;
   border-left: 2px solid #bf7e24;
+}
+
+.dollar-sign {
+  color: #c8c9cc;
+}
+
+.w-full input[type="date"] {
+  width: 100%;
+  justify-content: space-between;
 }

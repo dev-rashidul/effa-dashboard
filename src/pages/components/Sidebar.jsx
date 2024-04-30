@@ -137,7 +137,7 @@ const Sidebar = () => {
               </NavLink>
             </nav>
           </div>
-          <div className="mt-auto p-4 fixed bottom-[20px]">
+          <div className="mt-auto p-4 fixed bottom-0">
             <nav className="grid items-start text-sm font-medium">
               <NavLink
                 to="/help"
