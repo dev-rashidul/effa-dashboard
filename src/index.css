@@ -89,7 +89,46 @@ nav a.active {
   color: #c8c9cc;
 }
 
-.w-full input[type="date"] {
-  width: 100%;
-  justify-content: space-between;
+.zip-select button {
+  padding-left: 150px;
+}
+
+.create__scholarship__form__card {
+  position: relative;
+}
+
+.create__scholarship__form__card::before {
+  position: absolute;
+  content: "";
+  top: 8px;
+  left: -37px;
+  width: 12px;
+  height: 12px;
+  background: #d9d9d9;
+  border-radius: 100%;
+}
+
+.create__scholarship__form__card.step-1::before {
+  content: url(../src/assets/step-1-check.svg);
+  top: 0;
+  left: -47px;
+  background: none;
+}
+
+.create__scholarship__form__card.step-1::after {
+  position: absolute;
+  content: "";
+  top: 32px;
+  left: -32px;
+  width: 2px;
+  height: 100%;
+  background: #cc8626;
+}
+
+.create__scholarship__form__card.step-2::after {
+  position: absolute;
+  content: "";
+  content: url(../src/assets/step-2.svg);
+  top: 0;
+  left: -47px;
 }

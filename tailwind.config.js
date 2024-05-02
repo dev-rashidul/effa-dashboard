@@ -23,6 +23,7 @@ export const theme = {
       blackNormal: "#4C525B",
       LightBlack: "#83888F",
       darkOrange: "#BF7E24",
+      orangeNormal: "#E6972B",
       grey: "#C8C9CC",
       border: "hsl(var(--border))",
       input: "hsl(var(--input))",
